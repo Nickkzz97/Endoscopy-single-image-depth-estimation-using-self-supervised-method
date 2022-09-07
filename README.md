@@ -1,6 +1,8 @@
 # Endoscopy-single-image-depth-estimation-using-self-supervised-method
 A Comparison Based Study On Depth Estimation of Monocular Endoscopic  Images using Self-supervised Learning Methods
 
+Training dataset root : https://drive.google.com/drive/folders/122y00jCDJswnLwgNwyFhE3cdyg_EzX6j?usp=sharing
+
 Training of our implemented model from scratch:
 
 !python train.py --id_range 2 --input_downsampling 4.0 --network_downsampling 64 --adjacent_range 5 30 
