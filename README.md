@@ -1,7 +1,7 @@
 # Endoscopy-single-image-depth-estimation-using-self-supervised-method
 A Comparison Based Study On Depth Estimation of Monocular Endoscopic  Images using Self-supervised Learning Methods
 
-Training of our implemented model from scratch
+Training of our implemented model from scratch:
 
 !python train.py --id_range 2 --input_downsampling 4.0 --network_downsampling 64 --adjacent_range 5 30 
            -      -input_size 256 320 --batch_size 2 --num_workers 2 --num_pre_workers 2 --validation_interval 1 
@@ -10,7 +10,7 @@ Training of our implemented model from scratch
                  --validation_patient_id 1 --number_epoch 51 --num_iter 100   --training_result_root "./Pre_trained_models" 
                  --training_data_root "./training_data_root"
                  
-Training of our implemented model by loading pre-trained model
+Training of our implemented model by loading pre-trained model:
 
 !python train.py --id_range 2 --input_downsampling 4.0 --network_downsampling 64 --adjacent_range 5 30 
                  --input_size 256 320 --batch_size 2 --num_workers 2 --num_pre_workers 2 --validation_interval 1 
@@ -20,13 +20,13 @@ Training of our implemented model by loading pre-trained model
                  --training_data_root "./training_data_root" --load_trained_model
                  --trained_model_path "./Pre_trained_models/depth_estimation_train_run_8_3_18_8_test_id_[_1_]/"checkpoint_model_epoch_51_validation_0.08002564724948671.pt
                  
-TensorBoard Visualisation of results
+TensorBoard Visualisation of results:
 
 !pip install tensorboardX
 %load_ext tensorboard
 %tensorboard --logdir './Pre_trained_models/depth_estimation_train_run_7_12_16_16_test_id_[_1_]'
 
-Testing with pre-trained model with natural images
+Testing with pre-trained model with natural images:
 
 !python test_simple.py --image_path assets/test_image.jpg --model_name mono+stereo_640x192
 
